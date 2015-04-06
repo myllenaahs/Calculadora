@@ -1,2 +1,2 @@
-# pad-project
-Repositório criado para projeto de PAD.
+# pad-calculadora
+Repositório criado para calculadora.
