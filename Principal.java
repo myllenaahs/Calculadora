@@ -1,38 +1,51 @@
 import java.util.Scanner;
+import java.io.*;
 
 public class Principal {
-	
-	public static void main (String[]args){
-		Scanner key = new Scanner (System.in);
+	public static void main(String[]args) throws IOException{
+		Scanner key = new Scanner(System.in);
 		
-		int v1,v2;
+		double v1,v2,result;
 		String op;
+		result=0;
 		
-		v1=key.nextInt();
+		v1=key.nextDouble();
 		op=key.next();
-		v2=key.nextInt();
+		v2=key.nextDouble();
 		
-		switch (op) {
-			case "+": {
-				System.out.println(v1+v2);
-				break;
-			}
-			case "-": {
-				System.out.println(v1-v2);
-				break;
-			}
-			case "*": {
-				System.out.println(v1*v2);
-				break;
-			}
-			case "/": {
-				System.out.println(v1/v2);
-				break;
-			}
-			
+		
+		
+		FileWriter arq = new FileWriter("resultado.txt"); 
+		PrintWriter gravarArq = new PrintWriter(arq);
+		
+		switch (op){
+		case "+":{
+			result=v1+v2;
+			gravarArq.printf("Operação: "+v1+" + "+v2+" = "+result);
+			System.out.println(v1+" + "+v2+" = "+result);
+			break;
+		}
+		case "-":{
+			result=v1-v2;
+			gravarArq.printf("Operação: "+v1+" - "+v2+" = "+result);
+			System.out.println(v1+" - "+v2+" = "+result);
+			break;
+		}
+		case "*":{
+			result=v1*v2;
+			gravarArq.printf("Operação: "+v1+" * "+v2+" = "+result);
+			System.out.println(v1+" * "+v2+" = "+result);
+			break;
+		}
+		case "/":{
+			result=v1/v2;
+			gravarArq.printf("Operação: "+v1+" / "+v2+" = "+result);
+			System.out.println(v1+" / "+v2+" = "+result);
+			break;
+		}
 		}
 		
-		
-	}
+		arq.close();
 
+	}
 }
