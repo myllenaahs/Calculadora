@@ -1,9 +1,9 @@
 
-public class Consumidor {
+public class Principal {
 
 	public static void main(String[] args) {
 		
-		Thread t = new Thread();
+		Sync t = new Sync();
 		
 		do{
 			

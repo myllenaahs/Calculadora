@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Thread  implements Runnable{
+public class Sync  implements Runnable{
 	
 	Scanner key = new Scanner(System.in);
 
@@ -24,7 +24,7 @@ public class Thread  implements Runnable{
 	
 	public synchronized int calculate(){
 		
-		Calculadora c = new Calculadora();
+		Calc c = new Calc();
 		
 		return c.calculando(x, operador, y);
 		

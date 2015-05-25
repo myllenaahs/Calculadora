@@ -33,9 +33,9 @@ public class Calculadora  {
 			PrintWriter pw = new PrintWriter(new FileWriter("Pw.txt",true), true);
 			SimpleDateFormat data = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
 			pw.println(data.format(new Date()));
-			pw.println("Primeiro operando: "+x+"");
+			pw.println("Operando 1: "+x+"");
 			pw.println("Operador: "+operador+"");
-			pw.println("Segundo operando: "+y+"");
+			pw.println("Operando 2: "+y+"");
 			pw.close();
 			
 		} catch (IOException erro) {
