@@ -1,19 +1,20 @@
+
 public class Calc {
-
-	public int soma(int a, int b) {
-		return a + b;
+	
+	public static int soma (int a, int b){
+		return a+b;
 	}
-
-	public int subtracao(int a, int b) {
-		return a - b;
+	
+	public static int subtrai (int a, int b){
+		return a-b;
 	}
-
-	public int multiplicacao(int a, int b) {
-		return a * b;
+	
+	public static int multiplica (int a, int b){
+		return a*b;
 	}
-
-	public int divisao(int a, int b) {
-		return a / b;
+	
+	public static int divide (int a, int b){
+		return a/b;
 	}
-
+	
 }
